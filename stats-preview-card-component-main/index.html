@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Stats preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root {
+      --color-main-background: hsl(233, 47%, 7%);
+      --color-card-background: hsl(244, 38%, 16%);
+      --color-accent: hsl(277, 64%, 61%);
+      --color-white: hsl(0, 0%, 100%);
+      --color-transparent-white: hsla(0, 0%, 100%, 0.75);
+      --color-for-state: hsla(0, 0%, 100%, 0.6)
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', 'Lexend Deca', sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 1.2;
+      background-color: var(--color-main-background);
+      margin: 0;
+      padding: 0;
+    }
+
+    /* ---- layout ---- */
+    #card {
+      background-color: var(--color-card-background);
+      max-width: 750px;
+      height: 300px;
+      border-radius: 10px;
+      color: var(--color-white);
+      padding: 0;
+      margin: 150px auto;
+      display: flex;
+    }
+
+    @media (max-width: 800px) {
+      #card {
+        max-width: 355px;
+        height: 750px;
+        padding: 0;
+        margin: 100px auto 50px auto;
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+
+    #content {
+      width: 50%;
+      height: auto;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    figure {
+      width: 50%;
+      padding: 0;
+      margin: 0;
+      border-radius: 7px;
+      background: url(./images/image-header-desktop.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+
+    }
+
+    @media (max-width: 800px) {
+      figure {
+        width: 100%;
+        height: 35%;
+      }
+
+      #content {
+        width: 100%;
+        height: 65%;
+      }
+    }
+
+    #description {
+      height: 65%;
+      width: 100%;
+    }
+
+    #states {
+      width: 100%;
+      height: 35%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media (max-width: 800px) {
+      #states {
+        height: 80%;
+        flex-direction: column;
+      }
+
+      article {
+        text-align: center;
+        padding-top: 30px;
+      }
+    }
+
+    article {
+      max-width: 80%;
+      height: 100%;
+      margin: 0 auto;
+    }
+
+    /* --- finished --- */
+
+    .group-template {
+      height: 100%;
+      width: 33%;
+      text-align: center;
+    }
+
+    @media (max-width: 800px) {
+      .group-template {
+        width: 100%;
+      }
+    }
+
+    .accent {
+      color: var(--color-accent);
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 0.865rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin-top: 30px;
+      margin-bottom: 0;
+    }
+
+    .stat-heading {
+      color: var(--color-for-state);
+    }
+
+    .main-paragraph {
+      color: var(--color-transparent-white);
+    }
+
+    /* pre-configure */
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <main id="card">
+    <section id="content">
+      <div id="description">
+        <article class="main-paragraph">
+          <h1>
+            Get <span class="accent">insights</span> that help your bussiness grow.
+          </h1>
+          <p>
+            Discover the benefits of data analytics and make better decisions regarding revenue, customer
+            experience, and overall efficiency.
+          </p>
+        </article>
+      </div>
+
+      <div id="states">
+        <div class="group-template">
+          <h2 class="stat-heading">10k+</h2>
+          <p>compaines</p>
+        </div>
+        <div class="group-template">
+          <h2 class="stat-heading">314</h2>
+          <p>templastes</p>
+
+        </div>
+        <div class="group-template">
+          <h2 class="stat-heading">12m+</h2>
+          <p>queries</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- left side photo of the card -->
+    <figure>
+    </figure>
+  </main>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Min Aung Thu Win</a>.
+  </div>
+
+</body>
+
+</html>
