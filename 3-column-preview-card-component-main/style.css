@@ -11,6 +11,7 @@
     font-family: "Lexend Deca", sans-serif;
 }
 
+
 h1 {
     font-size: 40px;
     font-weight: 700;
@@ -26,6 +27,7 @@ p {
     padding-bottom: 30px;
 }
 
+/* I want to round container, but not work */
 #container {
     max-width: 720px;
     width: 100%;
@@ -34,7 +36,15 @@ p {
     margin: 100px auto;
     display: flex;
     padding: 0;
-    border-radius: 3px;
+    border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+    #container {
+        flex-direction: column;
+        width: 240px;
+        max-height: 1600px;
+    }
 }
 
 .box {
@@ -58,8 +68,6 @@ p {
 
 .btn {
     cursor: pointer;
-
-    /* pill button */
     border: none;
     padding: 10px 20px;
     text-align: center;
