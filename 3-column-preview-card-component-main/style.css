@@ -1,0 +1,96 @@
+:root {
+    --color-bright-orange: hsl(31, 77%, 52%);
+    --color-dark-cyan: hsl(184, 100%, 22%);
+    --color-very-dark-cyan: hsl(179, 100%, 13%);
+}
+
+* {
+    /* box-sizing: border-box; */
+    line-height: 1.5;
+    font-weight: 400;
+    font-family: "Lexend Deca", sans-serif;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Big Shoulders Display', cursive, sans-serif;
+    padding: 0;
+    margin: 0;
+    padding-left: 10px;
+}
+
+p {
+    font-size: 15px;
+    padding-left: 10px;
+    padding-bottom: 30px;
+}
+
+#container {
+    max-width: 720px;
+    width: 100%;
+    max-height: 500px;
+    height: 100%;
+    margin: 100px auto;
+    display: flex;
+    padding: 0;
+    border-radius: 3px;
+}
+
+.box {
+    margin: 0;
+    padding: 20px;
+    padding-right: 40px;
+    color: white;
+}
+
+.icon {
+    height: 60px;
+    margin: 0;
+}
+
+.desc {
+    height: 280px;
+    max-height: 420px;
+    margin: 0;
+    /* height: ; */
+}
+
+.btn {
+    cursor: pointer;
+
+    /* pill button */
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+/* all card color */
+.orange {
+    background-color: var(--color-bright-orange);
+}
+
+.cyan {
+    background-color: var(--color-dark-cyan);
+}
+
+.dark-cyan {
+    background-color: var(--color-very-dark-cyan);
+}
+
+.orange-btn {
+    color: var(--color-bright-orange);
+}
+
+.cyan-btn {
+    color: var(--color-dark-cyan);
+}
+
+.dark-cyan-btn {
+    color: var(--color-very-dark-cyan);
+}
